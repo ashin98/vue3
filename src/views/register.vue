@@ -1,29 +1,9 @@
 <template>
-    
-        注册
-    
+  <div>注册</div>
 </template>
 
-<script>
-export default {
-    name: 'Vue32Register',
-
-    data() {
-        return {
-            
-        };
-    },
-
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+<script setup>
+import { http } from '../api/login'
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
