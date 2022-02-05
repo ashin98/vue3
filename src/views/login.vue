@@ -16,7 +16,12 @@
           style="width: 20px; height: 20px; margin-right: 8px"
           class="svg-container"
         />
-        <el-input v-model="form.password"></el-input>
+        <el-input v-model="form.password" :type="passwordType"></el-input>
+        <el-icon
+          @click="handlePasswordType"
+          :style="{ color: passwordType === 'password' ? '' : 'red' }"
+          ><open
+        /></el-icon>
       </el-form-item>
       <el-button type="primary" class="login-button" @click="handleLogin"
         >登录</el-button
@@ -26,12 +31,13 @@
 </template>
 
 <script setup>
-import { login } from '../api/login.js'
+import { useStore } from 'vuex'
+const store = useStore() //使用vuex
 import { ref } from 'vue'
-import { Avatar, Lock } from '@element-plus/icons-vue'
+import { Avatar, Lock, Open } from '@element-plus/icons-vue'
 const form = ref({
-  username: '',
-  password: ''
+  username: 'admin',
+  password: '123456'
 })
 const rules = ref({
   username: [
@@ -59,13 +65,20 @@ const rules = ref({
     }
   ]
 })
-
+const passwordType = ref('password')
+function handlePasswordType() {
+  console.log(111)
+  if (passwordType.value === 'password') {
+    passwordType.value = 'text'
+  } else {
+    passwordType.value = 'password'
+  }
+}
 const formRef = ref(null)
 const handleLogin = () => {
   formRef.value.validate((valid) => {
     if (valid) {
-      console.log(111)
-      http(form.value)
+      store.dispatch('login', form.value)
     } else {
       console.log('error submit')
       return false

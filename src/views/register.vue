@@ -1,9 +1,7 @@
-<template>
-  <div>注册</div>
-</template>
+<template>注册</template>
 
 <script setup>
-import { http } from '../api/login'
+import { login } from '../api/login'
 </script>
 
 <style lang="scss" scoped></style>

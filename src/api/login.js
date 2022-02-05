@@ -1,8 +1,11 @@
+import service from './request'
 
-
-const http = {
-  get(n){
-    return n
-  }
+export const login =  (data)=>{
+  return service({
+    url:'login',
+    method:'POST',
+    data
+  })
+   
 }
-export default {http}
+
