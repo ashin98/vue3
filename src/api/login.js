@@ -2,7 +2,7 @@ import service from './request'
 
 export const login =  (data)=>{
   return service({
-    url:'login',
+    url:'/login',
     method:'POST',
     data
   })
