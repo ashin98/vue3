@@ -41,6 +41,7 @@ export default {
     prevBtnText: '上一步',
     guideBtn: '引导按钮',
     hamburgerBtn: '汉堡按钮',
-    fullScreen: '全屏按钮'
+    fullScreen: '全屏按钮',
+    lang:'切换语言'
   }
 }

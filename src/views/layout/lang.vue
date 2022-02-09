@@ -1,6 +1,6 @@
 <!--切换语言组件-->
 <template>
-  <el-dropdown @command="handleCommand">
+  <el-dropdown @command="handleCommand" id="lang">
     <el-icon :size="30" style="padding-top: 12px"><setting /></el-icon>
     <template #dropdown>
       <el-dropdown-menu>

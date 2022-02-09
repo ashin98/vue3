@@ -6,6 +6,9 @@
     </el-icon>
   </div>
   <Breadcrumb />
+  <div class="driver">
+    <Driver />
+  </div>
   <div class="screenfull">
     <ScreenFull />
   </div>
@@ -22,6 +25,7 @@ import Breadcrumb from './breadcrumb.vue'
 import Avatar from './avatar.vue'
 import Lang from './lang.vue'
 import ScreenFull from './screenFull.vue'
+import Driver from './driver/index.vue'
 import { Expand, Fold } from '@element-plus/icons-vue'
 import { useStore } from 'vuex'
 import { computed } from 'vue'
@@ -44,6 +48,10 @@ function handleSiderbar() {
     border: none;
     font-size: 26px;
   }
+}
+.driver {
+  position: absolute;
+  right: 215px;
 }
 .screenfull {
   position: absolute;

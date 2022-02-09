@@ -1,8 +1,10 @@
 <!--全屏模块-->
 <template>
-  <el-icon :size="30" style="padding-top: 12px" @click="handleFullScreen"
-    ><full-screen
-  /></el-icon>
+  <div id="screenFull">
+    <el-icon :size="30" style="padding-top: 12px" @click="handleFullScreen"
+      ><full-screen
+    /></el-icon>
+  </div>
 </template>
 
 <script setup>
