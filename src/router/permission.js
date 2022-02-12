@@ -8,14 +8,12 @@ router.beforeEach((to,from,next)=>{
     if(store.getters.token){
         //如果有token
         if(to.path==='/login'){
-            next('/users')
+            next('/')
         }else{
+            //没token
             next()
         }
-        
-       
     }else{
-        //没token
         if(whiteList.includes(to.path)){
             next()
         }else{

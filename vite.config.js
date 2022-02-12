@@ -24,16 +24,18 @@ export default {
         }
       }
     }
-  },
-  css: {
-    loaderOptions: {
-      sass: {
-        // 8版本用prependData:
-        prependData: `
-          @import "./src/styles/variables.scss;  // scss文件地址
-          @import "./src/styles/sidebar.scss";     // scss文件地址
-        `
-      }
-    }
   }
 }
+// module.exports = {
+//     css: {
+//         loaderOptions: {
+//           sass: {
+//             // 8版本用prependData:
+//             prependData: `
+//               @import "@/styles/variables.scss";  // scss文件地址
+//               @import "@/styles/mixin.scss";     // scss文件地址
+//             `
+//           }
+//         }
+//       }
+// }
