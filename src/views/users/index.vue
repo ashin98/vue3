@@ -132,7 +132,7 @@ const handleDialog = (row) => {
   dialogVisible.value = true
 }
 
-//删除用户 删除用户
+//删除用户
 const delUser = (row) => {
   ElMessageBox.confirm(i18n.t('dialog.deleteTitle'), {
     confirmButtonText: '确定',
