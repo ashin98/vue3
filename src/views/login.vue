@@ -2,7 +2,7 @@
   <div class="login-container">
     <el-form ref="formRef" :model="form" class="login-form" :rules="rules">
       <div class="title-container">
-        <h3 class="title">用户登录</h3>
+        <h3 class="title">{{ $t('login.title') }}</h3>
       </div>
       <el-form-item prop="username">
         <avatar
@@ -23,9 +23,9 @@
           ><open
         /></el-icon>
       </el-form-item>
-      <el-button type="primary" class="login-button" @click="handleLogin"
-        >登录</el-button
-      >
+      <el-button type="primary" class="login-button" @click="handleLogin">{{
+        $t('login.btnTitle')
+      }}</el-button>
     </el-form>
   </div>
 </template>
@@ -74,6 +74,7 @@ function handlePasswordType() {
     passwordType.value = 'password'
   }
 }
+//点击登录，派发dispatch
 const formRef = ref(null)
 const handleLogin = () => {
   formRef.value.validate((valid) => {
